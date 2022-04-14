@@ -1,6 +1,7 @@
 public class RobotBuilder {
     private int numberOfArms;
     private int numberOfSensors;
+    private int numberOfLegs;
 
     public RobotBuilder withArms(int numberOfArms) {
         this.numberOfArms = numberOfArms;
@@ -13,6 +14,11 @@ public class RobotBuilder {
     }
 
     public Robot build() {
-        return new Robot(numberOfArms, numberOfSensors);
+        return new Robot(numberOfArms, numberOfSensors, numberOfLegs);
+    }
+
+    public RobotBuilder withLegs(int numberOfLegs) {
+        this.numberOfLegs = numberOfLegs;
+        return this;
     }
 }
