@@ -6,14 +6,14 @@ public class RobotTest {
 
     @Test
     void shouldCreateRobotWithTwoArms() {
-        Robot robot = new Robot(2, 0);
+        Robot robot = new RobotBuilder().withArms(2).build();
 
         assertEquals(2, robot.getArms());
     }
 
     @Test
     void shouldCreateRobotWithTenSensors() {
-        Robot robot = new Robot(2, 10);
+        Robot robot = new RobotBuilder().withSensors(10).build();
 
         assertEquals(10, robot.getSensors());
     }
