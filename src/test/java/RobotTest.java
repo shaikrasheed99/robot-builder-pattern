@@ -24,4 +24,13 @@ public class RobotTest {
 
         assertEquals(2, robot.getLegs());
     }
+
+    @Test
+    void shouldCreateRobotWithArmsAndLegsAndSensors() {
+        Robot robot = new RobotBuilder().withArms(2).withSensors(10).withLegs(2).build();
+
+        assertEquals(2, robot.getArms());
+        assertEquals(10, robot.getSensors());
+        assertEquals(2, robot.getLegs());
+    }
 }
